@@ -1,124 +1,237 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             mc:Ignorable="d"
-             x:Class="AgendaApp.MainPage">
+<ContentPage
+    x:Class="AgendaApp.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:agendaApp="clr-namespace:AgendaApp;assembly=AgendaApp"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d">
 
-    <Grid BackgroundColor="#F3F5F9" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <Grid
+        BackgroundColor="#F3F5F9"
+        HorizontalOptions="FillAndExpand"
+        RowSpacing="0"
+        VerticalOptions="FillAndExpand">
         <Grid.RowDefinitions>
-            <RowDefinition Height="180"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="180" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid BackgroundColor="#455399" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout Margin="0,-40,0,0" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label TextColor="White" FontSize="40" HorizontalTextAlignment="Center">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text=".NET " FontSize="40" FontAttributes="Bold"/>
-                                <Span Text="Conf"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label Text="'Focusing on Xamarin'" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" Margin="0,-10,0,0"/>
-            </StackLayout>
+        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Image
+                Margin="0"
+                Aspect="AspectFill"
+                HeightRequest="180"
+                HorizontalOptions="FillAndExpand"
+                Source="azurebackground.jpg" />
+            <Image
+                Margin="0,-40,0,0"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                Source="azureupward.png"
+                VerticalOptions="Center" />
+
+            <!--<Label Text="'Focusing on Xamarin'" TextColor="White" FontSize="15" HorizontalTextAlignment="Center" Margin="0,-10,0,0"/>-->
+
         </Grid>
-        <pv:PancakeView Grid.Row="1" HasShadow="True" HeightRequest="80" Margin="0,-40,0,0" 
-                        HorizontalOptions="Center">
+        <pv:PancakeView
+            Grid.Row="1"
+            Margin="0,-40,0,0"
+            HasShadow="True"
+            HeightRequest="80"
+            HorizontalOptions="Center">
             <Grid ColumnSpacing="0" HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <BoxView Grid.RowSpan="2" WidthRequest="80" BackgroundColor="#00C6AE"/>
-                <BoxView Grid.Column="1" Grid.RowSpan="2" WidthRequest="80" BackgroundColor="White"/>
+                <BoxView
+                    Grid.RowSpan="2"
+                    BackgroundColor="#00C6AE"
+                    WidthRequest="80" />
+                <BoxView
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    WidthRequest="80" />
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="23" TextColor="White" FontSize="36" HorizontalOptions="Center"/>
-                    <Label Text="MARCH" TextColor="White" FontSize="12" HorizontalOptions="Center" Margin="0,-10,0,0"/>
+                    <Label
+                        FontSize="36"
+                        HorizontalOptions="Center"
+                        Text="23"
+                        TextColor="White" />
+                    <Label
+                        Margin="0,-10,0,0"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        Text="AUGUST"
+                        TextColor="White" />
                 </StackLayout>
-                <StackLayout Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
-                    <Label Text="28" TextColor="#455399" FontSize="36" HorizontalOptions="Center"/>
-                    <Label Text="MARCH" TextColor="#455399" FontSize="12" HorizontalOptions="Center" Margin="0,-10,0,0"/>
+                <StackLayout
+                    Grid.Column="1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Label
+                        FontSize="36"
+                        HorizontalOptions="Center"
+                        Text="28"
+                        TextColor="#455399" />
+                    <Label
+                        Margin="0,-10,0,0"
+                        FontSize="12"
+                        HorizontalOptions="Center"
+                        Text="AUGUST"
+                        TextColor="#455399" />
                 </StackLayout>
-                <BoxView Grid.Row="1" Grid.ColumnSpan="2" WidthRequest="73" HeightRequest="1" BackgroundColor="#F1F3F7" 
-                         HorizontalOptions="Center" VerticalOptions="Center"/>
-                <pv:PancakeView Grid.Row="1" HeightRequest="7" WidthRequest="7" BorderThickness="2" 
-                                BorderColor="#F1F3F7" CornerRadius="3.5" HorizontalOptions="Center" 
-                                VerticalOptions="Center" Margin="7"/>
-                <pv:PancakeView Grid.Row="1" Grid.Column="1" HeightRequest="7" WidthRequest="7" BorderThickness="2" 
-                                BorderColor="#C9D6EF" CornerRadius="3.5" HorizontalOptions="Center" 
-                                BackgroundColor="#C9D6EF" VerticalOptions="Center" Margin="7"/>
+                <BoxView
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#F1F3F7"
+                    HeightRequest="1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="73" />
+                <pv:PancakeView
+                    Grid.Row="1"
+                    Margin="7"
+                    BorderColor="#F1F3F7"
+                    BorderThickness="2"
+                    CornerRadius="3.5"
+                    HeightRequest="7"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="7" />
+                <pv:PancakeView
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="7"
+                    BackgroundColor="#C9D6EF"
+                    BorderColor="#C9D6EF"
+                    BorderThickness="2"
+                    CornerRadius="3.5"
+                    HeightRequest="7"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    WidthRequest="7" />
             </Grid>
         </pv:PancakeView>
-        <CollectionView Grid.Row="2" Margin="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                        SelectionMode="None" ItemsSource="{Binding MyAgenda}">
+        <CollectionView
+            Grid.Row="2"
+            Margin="25"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding MyAgenda}"
+            SelectionMode="None"
+            VerticalOptions="FillAndExpand">
             <CollectionView.Header>
-                <Label Text="Agenda" TextColor="Black" FontSize="18"/>
+                <Label
+                    FontSize="18"
+                    Text="Agenda"
+                    TextColor="Black" />
             </CollectionView.Header>
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"/>
+                <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <pv:PancakeView HasShadow="True" BackgroundColor="White" VerticalOptions="StartAndExpand" 
-                                    HorizontalOptions="FillAndExpand">
-                        <Grid VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                <DataTemplate x:DataType="agendaApp:Session">
+                    <pv:PancakeView
+                        BackgroundColor="White"
+                        HasShadow="True"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <BoxView BackgroundColor="{Binding Color}" WidthRequest="3" HorizontalOptions="Start"
-                                     VerticalOptions="FillAndExpand"/>
+                            <BoxView
+                                BackgroundColor="{Binding color}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="FillAndExpand"
+                                WidthRequest="3" />
                             <Expander Grid.Column="1">
                                 <Expander.Header>
                                     <Grid HorizontalOptions="FillAndExpand">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="3.5*"/>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="3.5*" />
                                         </Grid.ColumnDefinitions>
                                         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                                            <Label Text="{Binding Date, StringFormat='{0:dd}'}" TextColor="Black" FontSize="27" 
-                                                   HorizontalOptions="Center"/>
-                                            <Label Text="{Binding Date, StringFormat='{0:MMMM}'}" TextColor="Black" FontSize="10" 
-                                                   HorizontalOptions="Center" Margin="0,-10,0,0"/>
+                                            <Label
+                                                FontSize="27"
+                                                HorizontalOptions="Center"
+                                                Text="{Binding fecha, StringFormat='{0:dd}'}"
+                                                TextColor="Black" />
+                                            <Label
+                                                Margin="0,-10,0,0"
+                                                FontSize="10"
+                                                HorizontalOptions="Center"
+                                                Text="{Binding fecha, StringFormat='{0:MMMM}'}"
+                                                TextColor="Black" />
                                         </StackLayout>
-                                        <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
-                                                 VerticalOptions="FillAndExpand"/>
-                                        <StackLayout Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" Margin="20">
-                                            <Label Text="{Binding Topic}" TextColor="Black" FontSize="15"/>
-                                            <Label Text="{Binding Duration}" TextColor="#2F3246" FontSize="12" Margin="0,-10,0,0"/>
+                                        <BoxView
+                                            Grid.Column="1"
+                                            BackgroundColor="#F2F4F8"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="FillAndExpand"
+                                            WidthRequest="1" />
+                                        <StackLayout
+                                            Grid.Column="2"
+                                            Margin="20"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Center">
+                                            <Label
+                                                FontSize="15"
+                                                Text="{Binding nombreSesion}"
+                                                TextColor="Black" />
+                                            <Label
+                                                Margin="0,-10,0,0"
+                                                FontSize="12"
+                                                Text="{Binding fecha}"
+                                                TextColor="#2F3246" />
                                         </StackLayout>
                                     </Grid>
                                 </Expander.Header>
                                 <Grid HorizontalOptions="FillAndExpand">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="3.5*"/>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="3.5*" />
                                     </Grid.ColumnDefinitions>
-                                    <BoxView Grid.Column="1" BackgroundColor="#F2F4F8" WidthRequest="1" HorizontalOptions="Start" 
-                                             VerticalOptions="FillAndExpand"/>
+                                    <BoxView
+                                        Grid.Column="1"
+                                        BackgroundColor="#F2F4F8"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="FillAndExpand"
+                                        WidthRequest="1" />
                                     <StackLayout Grid.Column="2" Spacing="10">
-                                        <Label Text="SPEAKERS" TextColor="Black" Opacity="0.5" FontSize="10" Margin="20,0"/>
-                                        <StackLayout BindableLayout.ItemsSource="{Binding Speakers}" HorizontalOptions="Start" VerticalOptions="Center" Margin="20,0,0,20">
+                                        <Label
+                                            Margin="20,0"
+                                            FontSize="10"
+                                            Opacity="0.5"
+                                            Text="SPEAKERS"
+                                            TextColor="Black" />
+                                        <StackLayout
+                                            Margin="20,0,0,20"
+                                            BindableLayout.ItemsSource="{Binding asistentes}"
+                                            HorizontalOptions="Start"
+                                            VerticalOptions="Center">
                                             <BindableLayout.ItemTemplate>
-                                                <DataTemplate>
-                                                    <Label TextColor="#2F3246" FontSize="12">
+                                                <DataTemplate x:DataType="agendaApp:Asistente">
+                                                    <Label FontSize="12" TextColor="#2F3246">
                                                         <Label.FormattedText>
                                                             <FormattedString>
                                                                 <FormattedString.Spans>
-                                                                    <Span Text="{Binding Time}"/>
-                                                                    <Span Text=" - "/>
-                                                                    <Span Text="{Binding Name}" FontAttributes="Bold"/>
+                                                                    <Span Text="{Binding fechaAsistencia}" />
+                                                                    <Span Text=" - " />
+                                                                    <Span FontAttributes="Bold" Text="{Binding nombre}" />
                                                                 </FormattedString.Spans>
                                                             </FormattedString>
                                                         </Label.FormattedText>

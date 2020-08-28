@@ -136,4 +136,10 @@
       <Name>AgendaApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\azureupward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\azurebackground.jpg" />
+  </ItemGroup>
 </Project>
